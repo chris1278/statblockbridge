@@ -1,0 +1,5 @@
+services:
+    chris1278.statblockbridge.listener:
+        class: chris1278\statblockbridge\event\listener
+        tags:
+            - { name: event.listener }
