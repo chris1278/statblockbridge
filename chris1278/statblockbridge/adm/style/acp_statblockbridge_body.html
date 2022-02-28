@@ -1,0 +1,56 @@
+{% INCLUDECSS 'css/acp_statblockbridge.css' %}
+{% include 'overall_header.html' %}
+
+<h1>{{ lang('ACP_STATBLOCKBRIDGE_TITLE') }}</h1>
+	<p>{{ lang('STATBLOCKBRIDGE_CONFIG_DESC', STATBLOCKBRIDGE_EXT_NAME, STATBLOCKBRIDGE_EXT_VER) }}</p>
+
+{% if S_ERROR %}
+	<div class="errorbox">
+		<h3>{{ lang('WARNING') }}</h3>
+		<p>{{ ERROR_MSG }}</p>
+	</div>
+{% endif %}
+
+{% if STATBLOCKBRIDGE_NOTES %}
+	<div class="errorbox notice">
+		{{ STATBLOCKBRIDGE_NOTES }}
+	</div>
+{% endif %}
+
+<form id="chris1278_statblockbridge_acp" name="chris1278_statblockbridge_acp" method="post" action="{{ U_ACTION }}">
+
+	<fieldset>
+		<legend>{{ lang('SETTINGS') }}</legend>
+		<dl>
+			<dt><label for="lf_wwh2_active">{{ lang('ACP_LF_WWH2_ACTIVE') ~ lang('COLON') }}</label><br /><span>{{ lang('ACP_LF_WWH2_ACTIVE_EXPLAIN') }}</span></dt>
+			{% if LW_WWH2_CHANGE %}
+			<dd><label><input type="radio" class="radio" name="lf_wwh2_active" value="1"{% if LF_WWH2_ACTIVE %} checked="checked"{% endif %} /> {{ lang('YES') }}</label>
+				<label><input type="radio" class="radio" name="lf_wwh2_active" value="0"{% if not LF_WWH2_ACTIVE %} checked="checked"{% endif %} /> {{ lang('NO') }}</label></dd>
+			{% else%}
+				<dd>{{ LF_WWH2_NOT_ACTIVE }}</dd>
+			{% endif %}
+		</dl>
+		<dl>
+			<dt><label for="lf_statsperm_active">{{ lang('ACP_LF_STATSPERM_ACTIVE') ~ lang('COLON') }}</label><br /><span>{{ lang('ACP_LF_STATSPERM_ACTIVE_EXPLAIN') }}</span></dt>
+			{% if LW_STATSPERM_CHANGE %}
+			<dd><label><input type="radio" class="radio" name="lf_statsperm_active" value="1"{% if LF_STATSPERM_ACTIVE %} checked="checked"{% endif %} /> {{ lang('YES') }}</label>
+				<label><input type="radio" class="radio" name="lf_statsperm_active" value="0"{% if not LF_STATSPERM_ACTIVE %} checked="checked"{% endif %} /> {{ lang('NO') }}</label></dd>
+			{% else%}
+				<dd>{{ LF_STATSPERM_NOT_ACTIVE }}</dd>
+			{% endif %}
+		</dl>
+	</fieldset>
+	{% if LW_WWH2_CHANGE || LW_STATSPERM_CHANGE %}
+	<fieldset class="submit-buttons">
+		<input class="button1" type="submit" id="submit" name="submit" value="{{ lang('SUBMIT') }}" />&nbsp;
+		{{ S_FORM_TOKEN }}
+	</fieldset>
+	{% endif %}
+	<p class="chris1278_acp_copyright">
+		<b>{{ STATBLOCKBRIDGE_EXT_NAME }}</b> &copy; Chris1278<br />
+		{{ lang('STATBLOCKBRIDGE_LANG_DESC') }} {{ lang('STATBLOCKBRIDGE_LANG_EXT_VER') }} &bull; {{ lang('STATBLOCKBRIDGE_LANG_AUTHOR') }}
+	</p>
+
+</form>
+
+{% include 'overall_footer.html' %}
