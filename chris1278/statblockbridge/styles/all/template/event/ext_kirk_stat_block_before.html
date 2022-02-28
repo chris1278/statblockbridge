@@ -1,6 +1,0 @@
-{% if (LFWWH_TOTAL || LFWWH_USERS) && LFWWH_POS b-and 1 %}
-	{% if LFWWH_POS == 7 %}
-		{% set lfwwh_pos_hint = lang('LFWWH_TEMPLATE_POS_TOP') %}
-	{% endif %}
-	{% INCLUDE '@chris1278_statblockbridge/statblockbridge.html' %}
-{% endif %}
