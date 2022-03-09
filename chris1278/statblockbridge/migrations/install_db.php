@@ -11,8 +11,6 @@ namespace chris1278\statblockbridge\migrations;
 
 class install_db extends \phpbb\db\migration\migration
 {
-
-
 	public static function depends_on()
 	{
 		return ['\chris1278\statblockbridge\migrations\acp_module'];
@@ -24,7 +22,6 @@ class install_db extends \phpbb\db\migration\migration
 		[
 			['config.add', ['sbbridge_wwh2', 0]],
 			['config.add', ['sbbridge_statsperm', 0]],
-
-			];
+		];
 	}
 }

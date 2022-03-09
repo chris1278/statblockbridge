@@ -15,12 +15,12 @@ class main_info
 	{
 		return [
 			'filename'	=> '\chris1278\statblockbridge\acp\main_module',
-			'title'		=> 'ACP_STATBLOCKBRIDGE_TITLE',
+			'title'		=> 'SBBRIDGE_TITLE',
 			'modes'		=> [
 				'settings'	=> [
 					'title'	=> 'SETTINGS',
 					'auth'	=> 'ext_chris1278/statblockbridge',
-					'cat'	=> ['ACP_CSTATBLOCKBRIDGE_TITLE'],
+					'cat'	=> ['SBBRIDGE_TITLE'],
 				],
 			],
 		];

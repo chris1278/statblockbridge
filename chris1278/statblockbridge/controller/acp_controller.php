@@ -11,7 +11,6 @@ namespace chris1278\statblockbridge\controller;
 
 class acp_controller
 {
-
 	protected $extension_manager;
 	protected $config;
 	protected $language;
@@ -27,7 +26,6 @@ class acp_controller
 		\phpbb\request\request $request,
 		\phpbb\template\template $template,
 		\phpbb\user $user
-
 	)
 	{
 		$this->md_manager 			= $ext_manager->create_extension_metadata_manager('chris1278/statblockbridge');
@@ -45,11 +43,10 @@ class acp_controller
 		$ext_lang_min_ver 			= $this->md_manager->get_metadata()['extra']['lang-min-ver'];
 		$ext_display_name 			= $this->md_manager->get_metadata('display-name');
 		$ext_display_ver 			= $this->md_manager->get_metadata('version');
-		$lang_ver 					= ($this->language->lang('STATBLOCKBRIDGE_LANG_EXT_VER') !== 'STATBLOCKBRIDGE_LANG_EXT_VER') ? $this->language->lang('STATBLOCKBRIDGE_LANG_EXT_VER') : '0.0.0';
+		$lang_ver 					= ($this->language->lang('SBBRIDGE_LANG_EXT_VER') !== 'SBBRIDGE_LANG_EXT_VER') ? $this->language->lang('SBBRIDGE_LANG_EXT_VER') : '0.0.0';
 		$this->language->add_lang('acp_statblockbridge', 'chris1278/statblockbridge');
 		$notes 						= '';
 		add_form_key('chris1278_statblockbridge_acp');
-
 		$errors = [];
 
 		if ($this->request->is_set_post('submit'))
@@ -62,7 +59,7 @@ class acp_controller
 			{
 				$this->config->set('sbbridge_wwh2', $this->request->variable('sbbridge_wwh2', 0));
 				$this->config->set('sbbridge_statsperm', $this->request->variable('sbbridge_statsperm', 0));
-				trigger_error($this->language->lang('ACP_STATSPERM_SETTING_SAVED') . adm_back_link($this->u_action));
+				trigger_error($this->language->lang('SBBRIDGE_SETTING_SAVED') . adm_back_link($this->u_action));
 			}
 		}
 
@@ -102,22 +99,21 @@ class acp_controller
 
 		if (!phpbb_version_compare($lang_ver, $ext_lang_min_ver, '>='))
 		{
-			$this->add_note($notes, $this->language->lang('STATBLOCKBRIDGE_LANGUAGEPACK_OUTDATED'));
+			$this->add_note($notes, $this->language->lang('SBBRIDGE_LANGUAGEPACK_OUTDATED'));
 		}
-
 		$this->template->assign_vars([
-			'S_ERROR'					=> $s_errors,
-			'ERROR_MSG'					=> $s_errors ? implode('<br />', $errors) : '',
-			'STATBLOCKBRIDGE_NOTES'		=> $notes,
-			'STATBLOCKBRIDGE_EXT_NAME'	=> $ext_display_name,
-			'STATBLOCKBRIDGE_EXT_VER'	=> $ext_display_ver,
-			'U_ACTION'					=> $this->u_action,
+			'SBBRIDGE_S_ERROR'				=> $s_errors,
+			'SBBRIDGE_ERROR_MSG'			=> $s_errors ? implode('<br />', $errors) : '',
+			'SBBRIDGE_NOTES'				=> $notes,
+			'SBBRIDGE_EXT_NAME'				=> $ext_display_name,
+			'SBBRIDGE_EXT_VER'				=> $ext_display_ver,
 			'SBBRIDGE_WWH2_CHANGE'			=> $sbbridge_wwh2,
 			'SBBRIDGE_WWH2_NOT'				=> $sbbridge_wwh2_text,
 			'SBBRIDGE_WWH2'					=> (bool) $this->config['sbbridge_wwh2'],
 			'SBBRIDGE_STATSPERM_CHANGE'		=> $sbbridge_statsperm,
-			'SBBRIDGE_STATSPERM_NOT'			=> $sbbridge_statsperm_text,
-			'SBBRIDGE_STATSPERM'				=> (bool) $this->config['sbbridge_statsperm'],
+			'SBBRIDGE_STATSPERM_NOT'		=> $sbbridge_statsperm_text,
+			'SBBRIDGE_STATSPERM'			=> (bool) $this->config['sbbridge_statsperm'],
+			'U_ACTION'						=> $this->u_action,
 		]);
 	}
 

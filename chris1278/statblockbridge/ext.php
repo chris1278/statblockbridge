@@ -11,7 +11,6 @@ namespace chris1278\statblockbridge;
 
 class ext extends \phpbb\extension\base
 {
-
 	private function get_adm_back_link()
 	{
 		return adm_back_link(append_sid('index.' . $this->container->getParameter('core.php_ext'), 'i=acp_extensions&amp;mode=main'));
@@ -29,12 +28,12 @@ class ext extends \phpbb\extension\base
 
 		if (!(phpbb_version_compare(PHP_VERSION, $php_min_ver, '>=') && phpbb_version_compare(PHP_VERSION, $php_below_ver, '<')))
 		{
-			trigger_error(sprintf($language->lang('EXTENSION_NOT_ENABLEABLE') . '<br />' . $language->lang('ERROR_PHP_MISTMATCH'), $php_min_ver, $php_below_ver) . $this->get_adm_back_link(), E_USER_WARNING);
+			trigger_error(sprintf($language->lang('EXTENSION_NOT_ENABLEABLE') . '<br />' . $language->lang('SBBRIDGE_ERROR_PHP_MISTMATCH'), $php_min_ver, $php_below_ver) . $this->get_adm_back_link(), E_USER_WARNING);
 		}
 
 		if (!(phpbb_version_compare(PHPBB_VERSION, $phpbb_min_ver, '>=') && phpbb_version_compare(PHPBB_VERSION, $phpbb_below_ver, '<')))
 		{
-			trigger_error(sprintf($language->lang('EXTENSION_NOT_ENABLEABLE') . '<br />' . $language->lang('ERROR_PHPBB_MISTMATCH'), $phpbb_min_ver, $phpbb_below_ver) . $this->get_adm_back_link(), E_USER_WARNING);
+			trigger_error(sprintf($language->lang('EXTENSION_NOT_ENABLEABLE') . '<br />' . $language->lang('SBBRIDGE_ERROR_PHPBB_MISTMATCH'), $phpbb_min_ver, $phpbb_below_ver) . $this->get_adm_back_link(), E_USER_WARNING);
 		}
 
 		/**
@@ -45,10 +44,9 @@ class ext extends \phpbb\extension\base
 		if (!$ext_manager->is_enabled('kirk/statblock'))
 		{
 
-				trigger_error(sprintf($language->lang('EXTENSION_NOT_ENABLEABLE') . '<br />' . $language->lang('ERROR_STATBLOCK_NOT_INSTALLED')). adm_back_link(append_sid('index.' . $this->container->getParameter('core.php_ext'), 'i=acp_extensions&amp;mode=main')), E_USER_WARNING);
+				trigger_error(sprintf($language->lang('EXTENSION_NOT_ENABLEABLE') . '<br />' . $language->lang('SBBRIDGE_ERROR_STATBLOCK_NOT_INSTALLED')). adm_back_link(append_sid('index.' . $this->container->getParameter('core.php_ext'), 'i=acp_extensions&amp;mode=main')), E_USER_WARNING);
 		}
 
-			return $is_enableable;
-
+		return $is_enableable;
 	}
 }

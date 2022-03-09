@@ -33,11 +33,10 @@ if (empty($lang) || !is_array($lang))
 // in a url you again do not need to specify an order e.g., 'Click %sHERE%s' is fine
 
 $lang = array_merge($lang, [
-	'ACP_SBBRIDGE_WWH2'						=> 'Auswahl für LF who was here 2 (Wer war da?) aktivieren',
-	'ACP_SBBRIDGE_WWH2_EXPLAIN'				=> 'Hier können Sie auswählen ob Sie die Extension <a href="https://www.phpbb.de/community/viewtopic.php?t=241976" target="_blank"><u><b>LF who was here 2</b></u></a> nutzen möchten oder nicht.',
-	'ACP_SBBRIDGE_STATSPERM'					=> 'Auswahl für Stats Permissions aktivieren',
-	'ACP_SBBRIDGE_STATSPERM_EXPLAIN'			=> 'Hier können Sie auswählen ob Sie die Extension <a href="#" target="_blank"><u><b>Stats Permissions</b></u></a> nutzen möchten oder nicht.',
+	'SBBRIDGE_WWH2'							=> 'Auswahl für LF who was here 2 (Wer war da?) aktivieren',
+	'SBBRIDGE_WWH2_EXPLAIN'					=> 'Hier können Sie auswählen ob Sie die Extension <a href="https://www.phpbb.de/community/viewtopic.php?t=241976" target="_blank"><u><b>LF who was here 2</b></u></a> nutzen möchten oder nicht.',
+	'SBBRIDGE_STATSPERM'					=> 'Auswahl für Stats Permissions aktivieren',
+	'SBBRIDGE_STATSPERM_EXPLAIN'			=> 'Hier können Sie auswählen ob Sie die Extension <a href="https://www.phpbb.de/community/viewtopic.php?t=246067" target="_blank"><u><b>Stats Permissions</b></u></a> nutzen möchten oder nicht.',
 	'SBBRIDGE_DEACTIVATED'					=> 'Diese Extension ist gerade nicht aktiviert. Um diese Auswahl nutzen zu können aktivieren Sie bitte erst die Extension.',
 	'SBBRIDGE_DEINSTALLED'					=> 'Diese Extension ist im Moment nicht installiert. Um diese nutzen zu können müssen Sie die Extension zuerst installieren.',
-
 ]);

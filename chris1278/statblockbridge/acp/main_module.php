@@ -15,7 +15,6 @@ class main_module
 	public $tpl_name;
 	public $u_action;
 
-
 	public function main()
 	{
 		global $phpbb_container;
@@ -26,7 +25,7 @@ class main_module
 
 		$language = $phpbb_container->get('language');
 
-		$this->page_title = $language->lang('ACP_STATBLOCKBRIDGE_TITLE');
+		$this->page_title = $language->lang('SBBRIDGE_TITLE');
 
 		$acp_controller->set_page_url($this->u_action);
 

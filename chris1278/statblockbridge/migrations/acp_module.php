@@ -22,11 +22,11 @@ class acp_module extends \phpbb\db\migration\migration
 			['module.add', [
 				'acp',
 				'ACP_CAT_DOT_MODS',
-				'ACP_STATBLOCKBRIDGE_TITLE'
+				'SBBRIDGE_TITLE'
 			]],
 			['module.add', [
 				'acp',
-				'ACP_STATBLOCKBRIDGE_TITLE',
+				'SBBRIDGE_TITLE',
 				[
 					'module_basename'	=> '\chris1278\statblockbridge\acp\main_module',
 					'modes'				=> ['settings'],

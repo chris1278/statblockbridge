@@ -33,14 +33,13 @@ if (empty($lang) || !is_array($lang))
 // in a url you again do not need to specify an order e.g., 'Click %sHERE%s' is fine
 
 $lang = array_merge($lang, [
-// language pack author
-	'STATBLOCKBRIDGE_LANG_DESC'									=> 'Deutsch (Sie)',
-	'STATBLOCKBRIDGE_LANG_EXT_VER' 								=> '3.0.0',
-	'STATBLOCKBRIDGE_LANG_AUTHOR' 								=> 'Chris1278',
-	'STATBLOCKBRIDGE_CONFIG_DESC' 								=> 'Hier können die Einstellungen für die Erweiterung <b>%1$s (v%2$s)</b> geändert werden.',
-	'STATBLOCKBRIDGE_LANGUAGEPACK_OUTDATED'						=> 'Hinweis: Das Sprachpaket dieser Erweiterung ist nicht mehr aktuell.',
+	// language pack author
+	'SBBRIDGE_LANG_DESC'									=> 'Deutsch (Sie)',
+	'SBBRIDGE_LANG_EXT_VER' 								=> '3.0.0',
+	'SBBRIDGE_LANG_AUTHOR' 									=> 'Chris1278',
+	'SBBRIDGE_CONFIG_DESC' 									=> 'Hier können die Einstellungen für die Erweiterung <b>%1$s (v%2$s)</b> geändert werden.',
+	'SBBRIDGE_LANGUAGEPACK_OUTDATED'						=> 'Hinweis: Das Sprachpaket dieser Erweiterung ist nicht mehr aktuell.',
 	//ACP Translation
-	'ACP_STATBLOCKBRIDGE_TITLE'									=> 'Erweiterungs-Brücke für “Statistics Block”',
-	'ACP_STATSPERM_SETTING_SAVED'								=> 'Einstellungen erfolgreich gespeichert.',
-
+	'SBBRIDGE_TITLE'										=> 'Erweiterungs-Brücke für “Statistics Block”',
+	'SBBRIDGE_SETTING_SAVED'								=> 'Einstellungen erfolgreich gespeichert.',
 ]);

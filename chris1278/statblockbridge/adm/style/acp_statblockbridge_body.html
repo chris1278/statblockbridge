@@ -1,28 +1,27 @@
 {% INCLUDECSS 'css/acp_statblockbridge.css' %}
 {% include 'overall_header.html' %}
 
-<h1>{{ lang('ACP_STATBLOCKBRIDGE_TITLE') }}</h1>
-	<p>{{ lang('STATBLOCKBRIDGE_CONFIG_DESC', STATBLOCKBRIDGE_EXT_NAME, STATBLOCKBRIDGE_EXT_VER) }}</p>
+<h1>{{ lang('SBBRIDGE_TITLE') }}</h1>
+	<p>{{ lang('SBBRIDGE_CONFIG_DESC', SBBRIDGE_EXT_NAME, SBBRIDGE_EXT_VER) }}</p>
 
-{% if S_ERROR %}
+{% if SBBRIDGE_S_ERROR %}
 	<div class="errorbox">
 		<h3>{{ lang('WARNING') }}</h3>
-		<p>{{ ERROR_MSG }}</p>
+		<p>{{ SBBRIDGE_ERROR_MSG }}</p>
 	</div>
 {% endif %}
 
-{% if STATBLOCKBRIDGE_NOTES %}
+{% if SBBRIDGE_NOTES %}
 	<div class="errorbox notice">
-		{{ STATBLOCKBRIDGE_NOTES }}
+		{{ SBBRIDGE_NOTES }}
 	</div>
 {% endif %}
 
 <form id="chris1278_statblockbridge_acp" name="chris1278_statblockbridge_acp" method="post" action="{{ U_ACTION }}">
-
 	<fieldset>
 		<legend>{{ lang('SETTINGS') }}</legend>
 		<dl>
-			<dt><label for="sbbridge_wwh2">{{ lang('ACP_SBBRIDGE_WWH2') ~ lang('COLON') }}</label><br /><span>{{ lang('ACP_SBBRIDGE_WWH2_EXPLAIN') }}</span></dt>
+			<dt><label for="sbbridge_wwh2">{{ lang('SBBRIDGE_WWH2') ~ lang('COLON') }}</label><br /><span>{{ lang('SBBRIDGE_WWH2_EXPLAIN') }}</span></dt>
 			{% if SBBRIDGE_WWH2_CHANGE %}
 			<dd><label><input type="radio" class="radio" name="sbbridge_wwh2" value="1"{% if SBBRIDGE_WWH2 %} checked="checked"{% endif %} /> {{ lang('YES') }}</label>
 				<label><input type="radio" class="radio" name="sbbridge_wwh2" value="0"{% if not SBBRIDGE_WWH2 %} checked="checked"{% endif %} /> {{ lang('NO') }}</label></dd>
@@ -31,7 +30,7 @@
 			{% endif %}
 		</dl>
 		<dl>
-			<dt><label for="sbbridge_statsperm">{{ lang('ACP_SBBRIDGE_STATSPERM') ~ lang('COLON') }}</label><br /><span>{{ lang('ACP_SBBRIDGE_STATSPERM_EXPLAIN') }}</span></dt>
+			<dt><label for="sbbridge_statsperm">{{ lang('SBBRIDGE_STATSPERM') ~ lang('COLON') }}</label><br /><span>{{ lang('SBBRIDGE_STATSPERM_EXPLAIN') }}</span></dt>
 			{% if SBBRIDGE_STATSPERM_CHANGE %}
 			<dd><label><input type="radio" class="radio" name="sbbridge_statsperm" value="1"{% if SBBRIDGE_STATSPERM %} checked="checked"{% endif %} /> {{ lang('YES') }}</label>
 				<label><input type="radio" class="radio" name="sbbridge_statsperm" value="0"{% if not SBBRIDGE_STATSPERM %} checked="checked"{% endif %} /> {{ lang('NO') }}</label></dd>
@@ -47,10 +46,8 @@
 	</fieldset>
 	{% endif %}
 	<p class="chris1278_acp_copyright">
-		<b>{{ STATBLOCKBRIDGE_EXT_NAME }}</b> &copy; Chris1278<br />
-		{{ lang('STATBLOCKBRIDGE_LANG_DESC') }} {{ lang('STATBLOCKBRIDGE_LANG_EXT_VER') }} &bull; {{ lang('STATBLOCKBRIDGE_LANG_AUTHOR') }}
+		<b>{{ SBBRIDGE_EXT_NAME }}</b> &copy; Chris1278<br />
+		{{ lang('SBBRIDGE_LANG_DESC') }} {{ lang('SBBRIDGE_LANG_EXT_VER') }} &bull; {{ lang('SBBRIDGE_LANG_AUTHOR') }}
 	</p>
-
 </form>
-
 {% include 'overall_footer.html' %}
