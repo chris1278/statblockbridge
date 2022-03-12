@@ -21,7 +21,7 @@
 	<fieldset>
 		<legend>{{ lang('SETTINGS') }}</legend>
 		<dl>
-			<dt><label for="sbbridge_wwh2">{{ lang('SBBRIDGE_WWH2') ~ lang('COLON') }}</label><br /><span>{{ lang('SBBRIDGE_WWH2_EXPLAIN') }}</span></dt>
+			<dt><label>{{ lang('SBBRIDGE_WWH2') ~ lang('COLON') }}</label><br /><span>{{ lang('SBBRIDGE_WWH2_EXPLAIN') }}</span></dt>
 			{% if SBBRIDGE_WWH2_CHANGE %}
 			<dd><label><input type="radio" class="radio" name="sbbridge_wwh2" value="1"{% if SBBRIDGE_WWH2 %} checked="checked"{% endif %} /> {{ lang('YES') }}</label>
 				<label><input type="radio" class="radio" name="sbbridge_wwh2" value="0"{% if not SBBRIDGE_WWH2 %} checked="checked"{% endif %} /> {{ lang('NO') }}</label></dd>
@@ -30,7 +30,7 @@
 			{% endif %}
 		</dl>
 		<dl>
-			<dt><label for="sbbridge_statsperm">{{ lang('SBBRIDGE_STATSPERM') ~ lang('COLON') }}</label><br /><span>{{ lang('SBBRIDGE_STATSPERM_EXPLAIN') }}</span></dt>
+			<dt><label>{{ lang('SBBRIDGE_STATSPERM') ~ lang('COLON') }}</label><br /><span>{{ lang('SBBRIDGE_STATSPERM_EXPLAIN') }}</span></dt>
 			{% if SBBRIDGE_STATSPERM_CHANGE %}
 			<dd><label><input type="radio" class="radio" name="sbbridge_statsperm" value="1"{% if SBBRIDGE_STATSPERM %} checked="checked"{% endif %} /> {{ lang('YES') }}</label>
 				<label><input type="radio" class="radio" name="sbbridge_statsperm" value="0"{% if not SBBRIDGE_STATSPERM %} checked="checked"{% endif %} /> {{ lang('NO') }}</label></dd>
