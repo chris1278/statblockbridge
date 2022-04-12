@@ -1,7 +1,7 @@
 /**
 *
-* @package phpBB EExtension bridge for “Statistics Block”
-* @copyright (c) 2022 (Christian-Esch.de)
+* @package chris1278 multilanguageExtension
+* @copyright (c) 2022 Chris1278
 * @license http://opensource.org/licenses/gpl-2.0.php GNU General Public License v2
 *
 */
@@ -18,6 +18,14 @@ legend {
 	border-radius: 5px 5px 0 0;
 	padding: 2px 10px;
 	top: 0;
+}
+
+@media (max-width: 700px)
+{
+	legend {
+		margin-left: -6px;
+		padding: 2px 5px;
+}
 }
 
 .chris1278_acp_copyright {

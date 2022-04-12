@@ -20,6 +20,8 @@ if (empty($lang) || !is_array($lang))
 	$lang = [];
 }
 
+$t1 = isset($lang['EXTENSION_DISABLE_SUCCESS']) ? $lang['EXTENSION_DISABLE_SUCCESS'] . '<br /><br />' : '';
+
 // DEVELOPERS PLEASE NOTE
 //
 // All language files should use UTF-8 as their encoding and the files must not contain a BOM.
@@ -33,13 +35,5 @@ if (empty($lang) || !is_array($lang))
 // in a url you again do not need to specify an order e.g., 'Click %sHERE%s' is fine
 
 $lang = array_merge($lang, [
-	// language pack author
-	'SBBRIDGE_LANG_DESC'									=> 'Deutsch (Sie)',
-	'SBBRIDGE_LANG_EXT_VER' 								=> '3.0.1',
-	'SBBRIDGE_LANG_AUTHOR' 									=> 'Chris1278',
-	'SBBRIDGE_CONFIG_DESC' 									=> 'Hier können die Einstellungen für die Erweiterung <b>%1$s (v%2$s)</b> geändert werden.',
-	'SBBRIDGE_LANGUAGEPACK_OUTDATED'						=> 'Hinweis: Das Sprachpaket dieser Erweiterung ist nicht mehr aktuell.',
-	//ACP Translation
-	'SBBRIDGE_TITLE'										=> 'Erweiterungs-Brücke für “Statistics Block”',
-	'SBBRIDGE_SETTING_SAVED'								=> 'Einstellungen erfolgreich gespeichert.',
+	'EXTENSION_DISABLE_SUCCESS'					=> $t1 . 'The  <b>Extension bridge for “Statistics Block”</b> extension has also been disabled.',
 ]);

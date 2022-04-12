@@ -34,9 +34,9 @@ if (empty($lang) || !is_array($lang))
 
 $lang = array_merge($lang, [
 	'SBBRIDGE_WWH2'							=> 'Enable selection for LF who was here 2',
-	'SBBRIDGE_WWH2_EXPLAIN'					=> 'Here you can choose whether you want to use the <a href="https://www.phpbb.de/community/viewtopic.php?t=241976" target="_blank"><u><b>LF who was here 2</b></u></a> extension or not.',
+	'SBBRIDGE_WWH2_EXPLAIN'					=> 'Here you can choose whether the display of the extension <a href="https://www.phpbb.de/community/viewtopic.php?t=241976" target="_blank"><u><b>LF who was here 2</b></u></a> should be shown in the <b>Statistics Block</b>.',
 	'SBBRIDGE_STATSPERM'					=> 'Enable selection for Stats Permissions',
-	'SBBRIDGE_STATSPERM_EXPLAIN'			=> 'Here you can choose whether you want to use the Extension <a href="https://www.phpbb.de/community/viewtopic.php?t=246067" target="_blank"><u><b>Stats Permissions</b></u></a> or not.',
+	'SBBRIDGE_STATSPERM_EXPLAIN'			=> 'Here you can choose whether the display of the extension <a href="https://www.phpbb.de/community/viewtopic.php?t=246067" target="_blank"><u><b>Stats Permissions</b></u></a> should be shown in the <b>Statistics Block</b>.',
 	'SBBRIDGE_DEACTIVATED'					=> 'This extension is currently not activated. In order to be able to use this selection, please activate the extension first.',
 	'SBBRIDGE_DEINSTALLED'					=> 'This extension is not installed at the moment. In order to be able to use this, you must first install the extension.',
 ]);

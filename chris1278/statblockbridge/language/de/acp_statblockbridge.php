@@ -34,9 +34,9 @@ if (empty($lang) || !is_array($lang))
 
 $lang = array_merge($lang, [
 	'SBBRIDGE_WWH2'								=> 'Auswahl für LF who was here 2 (Wer war da?) aktivieren',
-	'SBBRIDGE_WWH2_EXPLAIN'						=> 'Hier kannst du auswählen ob du die Extension <a href="https://www.phpbb.de/community/viewtopic.php?t=241976" target="_blank"><u><b>LF who was here 2</b></u></a> nutzen möchtest oder nicht.',
+	'SBBRIDGE_WWH2_EXPLAIN'						=> 'Hier kannst du auswählen ob die Anzeige der Extension <a href="https://www.phpbb.de/community/viewtopic.php?t=241976" target="_blank"><u><b>LF who was here 2</b></u></a> im <b>Statistics Block</b> angezeigt werden soll.',
 	'SBBRIDGE_STATSPERM'						=> 'Auswahl für Stats Permissions aktivieren',
-	'SBBRIDGE_STATSPERM_EXPLAIN'				=> 'Hier kannst du auswählen ob du die Extension <a href="https://www.phpbb.de/community/viewtopic.php?t=246067" target="_blank"><u><b>Stats Permissions</b></u></a> nutzen möchtest oder nicht.',
+	'SBBRIDGE_STATSPERM_EXPLAIN'				=> 'Hier kannst du auswählen ob die Anzeige der Extension <a href="https://www.phpbb.de/community/viewtopic.php?t=246067" target="_blank"><u><b>Stats Permissions</b></u></a> im <b>Statistics Block</b> angezeigt werden soll.',
 	'SBBRIDGE_DEACTIVATED'						=> 'Diese Extension ist gerade nicht aktiviert. Um diese Auswahl nutzen zu können aktiviere bitte erst die Extension.',
 	'SBBRIDGE_DEINSTALLED'						=> 'Diese Extension ist im Moment nicht installiert. Um diese nutzen zu können musst du die Extension zuerst installieren.',
 ]);
