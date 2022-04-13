@@ -1,6 +1,6 @@
 {% if SBBRIDGE_STATSPERM_SINGLE && !SBBRIDGE_COMBO %}
 	{% if (STATSPERM_STATS || STATSPERM_NEWEST) %}
-		<div class="stat-block statsperm-statistics">
+		<div>
 			<h3>{{ lang('STATISTICS') }}</h3>
 			<p>
 				{% EVENT index_body_block_stats_prepend %}
@@ -18,7 +18,7 @@
 
 {% if SBBRIDGE_NXU_SINGLE && !SBBRIDGE_COMBO %}
 	{% if NEWEST_X_USERS_ENABLE %}
-		<div class="stat-block newest-x-users">
+		<div>
 			<h3>{{ lang('STATISTICS') }}</h3>
 			<p>
 				{% EVENT index_body_block_stats_prepend %}
@@ -27,7 +27,7 @@
 			</p>
 		</div>
 	{% else %}
-	<div class="stat-block">
+	<div>
 			<h3>{{ lang('STATISTICS') }}</h3>
 			<p>
 				{% EVENT index_body_block_stats_prepend %}
@@ -41,7 +41,7 @@
 
 
 {% if SBBRIDGE_COMBO && (STATSPERM_STATS || STATSPERM_NEWEST) %}
-	<div class="stat-block newest-x-users">
+	<div>
 		<h3>{{ lang('STATISTICS') }}</h3>
 		<p>
 			{% EVENT index_body_block_stats_prepend %}
@@ -60,7 +60,7 @@
 {% endif %}
 
 {% if SBBRIDGE_NO_EXT %}
-	<div class="stat-block">
+	<div>
 		<h3>{{ lang('STATISTICS') }}</h3>
 		<p>
 			{% EVENT index_body_block_stats_prepend %}
