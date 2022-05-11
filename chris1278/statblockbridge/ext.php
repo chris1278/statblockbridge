@@ -35,5 +35,6 @@ class ext extends \phpbb\extension\base
 		{
 			trigger_error(sprintf($language->lang('EXTENSION_NOT_ENABLEABLE') . '<br />' . $language->lang('SBBRIDGE_ERROR_PHPBB_MISTMATCH'), $phpbb_min_ver, $phpbb_below_ver) . $this->get_adm_back_link(), E_USER_WARNING);
 		}
+		return $is_enableable;
 	}
 }
