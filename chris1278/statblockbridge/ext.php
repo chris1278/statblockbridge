@@ -21,10 +21,10 @@ class ext extends \phpbb\extension\base
 		$is_enableable = true;
 		$language	= $this->container->get('language');
 		$language->add_lang('statblockbridgeerror', 'chris1278/statblockbridge');
-		$phpbb_min_ver		= '3.2.10';
+		$phpbb_min_ver		= '3.2.11';
 		$phpbb_below_ver	= '3.4.0@dev';
 		$php_min_ver	= '7.0.0';
-		$php_below_ver	= '8.2.0';
+		$php_below_ver	= '8.3.0';
 
 		if (!(phpbb_version_compare(PHP_VERSION, $php_min_ver, '>=') && phpbb_version_compare(PHP_VERSION, $php_below_ver, '<')))
 		{
