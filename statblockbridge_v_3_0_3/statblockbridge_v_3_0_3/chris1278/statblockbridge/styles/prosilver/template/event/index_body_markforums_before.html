@@ -1,0 +1,7 @@
+{% if SBBRIDGE_WWH2 %}
+{% if (LFWWH_TOTAL || LFWWH_USERS) && !definition.INCLUDED_LFWHOWASHERE %}
+	{% INCLUDEJS '@lukewcs_whowashere/who_was_here.js' %}
+	{% INCLUDECSS '@lukewcs_whowashere/who_was_here.css' %}
+	{% DEFINE INCLUDED_LFWHOWASHERE = true %}
+{% endif %}
+{% endif %}

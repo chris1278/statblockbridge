@@ -1,0 +1,8 @@
+{% if SBBRIDGE_WWH2 %}
+{% if (LFWWH_TOTAL || LFWWH_USERS) && LFWWH_POS b-and 4 %}
+	{% if LFWWH_POS == 7 %}
+		{% set lfwwh_pos_hint = lang('LFWWH_TEMPLATE_POS_BEFORE_BDAYS') %}
+	{% endif %}
+	{% INCLUDE '@chris1278_statblockbridge/statblockbridge.html' %}
+{% endif %}
+{% endif %}
