@@ -3,7 +3,7 @@
 	"type": "phpbb-extension",
 	"description": "Connects between Kirk's “Statistics Block” extension and some compatible extensions.",
 	"homepage": "https://www.phpbb.de/community/viewtopic.php?f=149&t=242009",
-	"version": "3.0.4",
+	"version": "3.0.6",
 	"time": "2022-02-27",
 	"license": "GPL-2.0-only",
 	"authors": [

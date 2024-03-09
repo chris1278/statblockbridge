@@ -10,6 +10,12 @@ fieldset {
 	border-radius: 10px;
 }
 
+.statblock_notice {
+	background-color: #cc954f;
+	color: #000000;
+	text-align: center;
+}
+
 legend {
 	background: inherit;
 	margin: 2px 0px 0px -11px;
@@ -85,4 +91,3 @@ legend {
 	left: 2px;
 	content: "\f00c";
 }
-

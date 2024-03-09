@@ -33,7 +33,6 @@ if (empty($lang) || !is_array($lang))
 // in a url you again do not need to specify an order e.g., 'Click %sHERE%s' is fine
 
 $lang = array_merge($lang, [
-	'SBBRIDGE_ERROR_STATBLOCK_NOT_INSTALLED'			=> '<br>Die Extension <b>“Statistics Block”</b> von kirk ist nicht installiert. Du musst erst die Erweiterung installieren bevor du diese hier verwenden kannst.',
 	'SBBRIDGE_ERROR_PHPBB_MISTMATCH'					=> '<br>Bitte schaue ob du die Richtige Phpbb Forums Version installiert hast.<br>Minimum phpBB %1$s aber kleiner als %2$s',
 	'SBBRIDGE_ERROR_PHP_MISTMATCH'						=> '<br>Bitte prüfe ob die korrekte Php Version aktiv ist. <br>Minimum PHP %1$s Maximum kleiner als PHP %2$s',
 ]);

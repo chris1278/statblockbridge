@@ -101,10 +101,21 @@ class acp_controller
 		{
 			$this->add_note($notes, $this->language->lang('SBBRIDGE_LANGUAGEPACK_OUTDATED'));
 		}
+
+		if (!$this->phpbb_ext_manager->is_enabled('kirk/statblock'))
+		{
+			$sbbridge_statblockinfo	= $this->language->lang('SBBRIDGE_STATBLOCK_NOT_ACTIVATED');
+		}
+		else
+		{
+			$sbbridge_statblockinfo	= '';
+		}
+
 		$this->template->assign_vars([
 			'SBBRIDGE_S_ERROR'				=> $s_errors,
-			'SBBRIDGE_ERROR_MSG'			=> $s_errors ? implode('<br />', $errors) : '',
+			'SBBRIDGE_ERROR_MSG'			=> $s_errors ? implode('<br>', $errors) : '',
 			'SBBRIDGE_NOTES'				=> $notes,
+			'SBBRIDGE_STATBLOCKINFO'		=> $sbbridge_statblockinfo,
 			'SBBRIDGE_EXT_NAME'				=> $ext_display_name,
 			'SBBRIDGE_EXT_VER'				=> $ext_display_ver,
 			'SBBRIDGE_WWH2_CHANGE'			=> $sbbridge_wwh2,

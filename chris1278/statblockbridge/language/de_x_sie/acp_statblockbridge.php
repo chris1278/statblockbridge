@@ -33,6 +33,7 @@ if (empty($lang) || !is_array($lang))
 // in a url you again do not need to specify an order e.g., 'Click %sHERE%s' is fine
 
 $lang = array_merge($lang, [
+	'SBBRIDGE_STATBLOCK_NOT_ACTIVATED'			=> 'Es wird die Erweiterung <a href="https://reyno41.bplaced.net/phpbb/viewtopic.php?t=205&sid=c9951cb358cd0b4cfb84fe97c95676f9" target="_blank"><u><b>Statistics Block</b></u></a> benötigt, diese ist jedoch nicht aktiviert oder nicht installiert.<br>Ohne diese Erweiterung haben die hier angebotenen Schalter keine Wirkung.',
 	'SBBRIDGE_WWH2'							=> 'Auswahl für LF who was here 2 (Wer war da?) aktivieren',
 	'SBBRIDGE_WWH2_EXPLAIN'					=> 'Hier können Sie auswählen ob die Anzeige der Extension <a href="https://www.phpbb.de/community/viewtopic.php?t=241976" target="_blank"><u><b>LF who was here 2</b></u></a> im <b>Statistics Block</b> angezeigt werden soll.',
 	'SBBRIDGE_STATSPERM'					=> 'Auswahl für Stats Permissions aktivieren',

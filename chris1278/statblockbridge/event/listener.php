@@ -39,7 +39,6 @@ class listener implements EventSubscriberInterface
 	public static function getSubscribedEvents()
 	{
 		return [
-			'core.acp_extensions_run_action_before'					=> 'sbbridge_info_statblock_deinstallation',
 			'lukewcs.whowashere.display_condition'					=> 'sbbridge_wwh2_override',
 			'lukewcs.statspermissions.display_condition'			=> 'sbbridge_statsperm_override',
 			'kirk.newestxusers.display_condition'					=> 'sbbridge_nxu_override',
@@ -47,24 +46,9 @@ class listener implements EventSubscriberInterface
 		];
 	}
 
-	public function sbbridge_info_statblock_deinstallation($event)
-	{
-		if ($event['ext_name'] != 'kirk/statblock' || $event['action'] != 'disable')
-		{
-			return;
-		}
-		$ext_statblockbridge = 'chris1278/statblockbridge';
-		$this->phpbb_ext_manager->disable($ext_statblockbridge);
-		if ($this->phpbb_ext_manager->is_disabled($ext_statblockbridge))
-		{
-			$this->log->add('admin', $this->user->data['user_id'], $this->user->ip, 'LOG_EXT_DISABLE', false, [$ext_statblockbridge]);
-			$this->language->add_lang('overwrite_phpbb_msg', $ext_statblockbridge);
-		}
-	}
-
 	public function sbbridge_wwh2_override($event)
 	{
-		if ($this->phpbb_ext_manager->is_enabled('lukewcs/whowashere') && $this->config['sbbridge_wwh2'] == 1)
+		if ($this->phpbb_ext_manager->is_enabled('lukewcs/whowashere') && $this->config['sbbridge_wwh2'] == 1 && $this->phpbb_ext_manager->is_enabled('kirk/statblock'))
 		{
 			$event['force_api_mode'] = true;
 		}
@@ -72,7 +56,7 @@ class listener implements EventSubscriberInterface
 
 	public function sbbridge_statsperm_override($event)
 	{
-		if ($this->phpbb_ext_manager->is_enabled('lukewcs/statspermissions'))
+		if ($this->phpbb_ext_manager->is_enabled('lukewcs/statspermissions') && $this->phpbb_ext_manager->is_enabled('kirk/statblock'))
 		{
 			$event['force_api_mode'] = true;
 		}
@@ -80,7 +64,7 @@ class listener implements EventSubscriberInterface
 
 	public function sbbridge_nxu_override($event)
 	{
-		if ($this->phpbb_ext_manager->is_enabled('kirk/newestxusers'))
+		if ($this->phpbb_ext_manager->is_enabled('kirk/newestxusers') && $this->phpbb_ext_manager->is_enabled('kirk/statblock'))
 		{
 			$event['force_api_mode'] = true;
 		}
