@@ -1,0 +1,18 @@
+{% if SBBRIDGE_OUTBLOCK && !SBBRIDGE_NXU_SINGLE && !SBBRIDGE_NO_EXT && (STATSPERM_STATS || STATSPERM_NEWEST) %}
+	<div class="stat-block newest-x-users">
+		<h3>{{ lang('STATISTICS') }}</h3>
+		<p>
+			{% EVENT index_body_block_stats_prepend %}
+			{% if STATSPERM_STATS %}
+				{{ TOTAL_POSTS }} &bull; {{ TOTAL_TOPICS }} &bull; {{ TOTAL_USERS }}
+			{% endif %}
+			{% if STATSPERM_NEWEST && !NEWEST_X_USERS_ENABLE %}
+			{{ STATSPERM_STATS ? ' &bull; '}}{{ SBBRIDGE_NEWEST_USER }}
+			{% endif %}
+			{% if STATSPERM_NEWEST && NEWEST_X_USERS_ENABLE %}
+				{% if U_ACP || !NEWEST_X_USERS_ADMINMODE %}{{ STATSPERM_STATS ? ' &bull; '}}{{ NEWEST_X_USER }}{% for newest_x_users in loops.newest_x_users %}{% if newest_x_users.S_ROW_COUNT > 0 %}{{ lang('COMMA_SEPARATOR') }}{% endif %} {{ newest_x_users.NEWEST_X_USERS }}{% endfor %}{% else %} &bull; {{ SBBRIDGE_NEWEST_USER }}{% endif %}
+			{% endif %}
+			{% EVENT index_body_block_stats_append %}
+		</p>
+	</div>
+{% endif %}
