@@ -77,7 +77,6 @@ class listener implements EventSubscriberInterface
 		{
 			$this->template->assign_vars([
 				'SBBRIDGE_WWH2'							=> $this->config['sbbridge_wwh2'],
-
 			]);
 		}
 	}
