@@ -35,7 +35,7 @@ if (empty($lang) || !is_array($lang))
 $lang = array_merge($lang, [
 	// language pack author
 	'SBBRIDGE_LANG_DESC'									=> 'Deutsch (Du)',
-	'SBBRIDGE_LANG_EXT_VER' 								=> '3.0.2',
+	'SBBRIDGE_LANG_EXT_VER' 								=> '3.0.8',
 	'SBBRIDGE_LANG_AUTHOR' 									=> 'Chris1278',
 	'SBBRIDGE_CONFIG_DESC' 									=> 'Hier können die Einstellungen für die Erweiterung <b>%1$s (v%2$s)</b> geändert werden.',
 	'SBBRIDGE_LANGUAGEPACK_OUTDATED'						=> 'Hinweis: Das Sprachpaket dieser Erweiterung ist nicht mehr aktuell.',
