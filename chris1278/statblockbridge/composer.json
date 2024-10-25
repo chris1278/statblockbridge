@@ -21,7 +21,7 @@
 	},
 	"extra": {
 		"display-name": "Extension bridge for “Statistics Block”",
-			"lang-min-ver": "3.0.2",
+			"lang-min-ver": "3.0.8",
 			"soft-require": {
 			"phpbb/phpbb": ">=3.2.11,<3.4.0@dev"
 		},
