@@ -2,7 +2,7 @@
 	"stable": {
 		"3.0": {
 			"current": "3.0.9",
-			"download": "https://github.com/chris1278/statblockbridge",
+			"download": "https://christian-esch.de/download/bridge/statblockbridge_3_0_9zip",
 			"announcement": "https://www.phpbb.de/community/viewtopic.php?f=149&p=1387722#p1387722",
 			"eol": null,
 			"security": false
